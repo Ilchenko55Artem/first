@@ -1,0 +1,6 @@
+body{ font-style: italic;}
+h1{text-align: center; color: rgb(0, 0, 0); font-weight: 900; font-style: normal;}
+p{text-align: justify; color: rgb(0, 0, 0); font-weight: 900;font-size: xx-large; margin-left: 20px  ; margin-right: 20px;}
+img{margin: auto; display: block;}
+a:link{color: crimson; font-size:xx-large;}
+a:hover{color:chartreuse; font-size:xx-large;}
