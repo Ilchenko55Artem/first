@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Викладачі</title>
+    <style>
+        .datetime {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-weight: 900;
+            background: burlywood;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .date {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+        .time {
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .time span:not(:last-child) {
+            position: relative;
+            margin: 0 6px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+        .back {
+            background-color: burlywood;
+            font-family: monospace;
+            font-size: xx-large;
+            text-align: center;
+            font-weight: 500;
+        }
+        .back a {
+            text-decoration: none;
+        }
+        a:link {
+            color: black;
+            font-size: xx-large;
+        }
+        a:hover {
+            color: chartreuse;
+            font-size: xx-large;
+        }
+        .item {
+            border: 10px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        .item img {
+            width: 300px;
+            height: 300px;
+            margin-right: 10px;
+        }
+        .item p {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .blocks {
+            display: grid;
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 10px;
+            justify-content: center;
+            grid-template-columns: auto;
+            align-content: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 10px;
+            
+        }
+    </style>
+</head>
+<body onload="initClock()">
+<div class="datetime">
+    <div class="date">
+        <span id="dayname">День</span>,
+        <span id="month">Місяць</span>
+        <span id="daynum">00</span>,
+        <span id="year">Рік</span>
+    </div>
+    <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+    </div>
+</div>
+<script type="text/javascript">
+    function initClock() {
+        updateClock();
+        window.setInterval(updateClock, 1000);
+    }
+    function updateClock() {
+        var now = new Date();
+        var dname = now.getDay(),
+            mo = now.getMonth(),
+            dnum = now.getDate(),
+            yr = now.getFullYear(),
+            hou = now.getHours(),
+            min = now.getMinutes(),
+            sec = now.getSeconds();
+        var month = ["Січень", "Лютий", "Брезень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"];
+        var week = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
+        var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds"];
+        var values = [week[dname], month[mo], dnum, yr, hou, min, sec];
+        for (var i = 0; i < ids.length; i++)
+            document.getElementById(ids[i]).textContent = values[i];
+    }
+</script>
+<div class="back a">
+    <a href="РГР.html"> <---Повернутися назад </a>
+</div>
+<div class="blocks">
+    <div class="item item_1">
+        <img src="https://img.freepik.com/premium-vector/cartoon-woman-icon_24911-4253.jpg">
+        <p>ДУБІНІНА ВІРА ОЛЕКСАНДРІВНА</p>
+        <p>Доктор філософських наук, професор закладу вищої освіти, завідувачка кафедри</p>
+        <p>Електронна пошта:  vera.dubinina777@gmail.com</p>
+    </div>
+    <div class="item item_2">
+        <img src="https://img.freepik.com/premium-vector/young-adult-boy-man-in-striped-blue-tshirt-with-brown-hair-round-avatar-face-icon-in-flat-style_768258-3333.jpg">
+        <p>БІЛАНОВ ОЛЕГ СЕРГІЙОВИЧ</p>
+        <p>Викладач закладу вищої освіти, завуч кафедри</p>
+        <p>Електронна пошта: oleg27bilanov@gmail.com</p>
+    </div>
+    <div class="item item_3">
+        <img src="https://img.freepik.com/premium-vector/avatar-of-person-in-the-cartoon-style-this-delightful-illustration-of-a-womans-avatar_198565-9423.jpg">
+        <p>ЮЩЕНКО ЮЛІЯ ПЕТРІВНА</p>
+        <p>Кандидат філософських наук, доцент закладу вищої освіти</p>
+        <p>Електронна пошта: yulia.yu@.ukr.net</p>
+    </div>
+    <div class="item item_4">
+        <img src="https://cojo.ru/wp-content/uploads/2022/12/avatarka-38.webp">
+        <p>ДЕРГАЙ АРТЕМ СЕРГІЙОВИЧ</p>
+        <p>Викладач закладу вищої освіти</p>
+        <p>Електронна пошта: a.derhai@nupp.edu.ua</p>
+    </div>
+    <div class="item item_5">
+        <img src="https://img.freepik.com/premium-vector/person-design_24911-25398.jpg">
+        <p>ЛИПІЙ ЄВГЕНІЙ СЕРГІЙОВИЧ</p>
+        <p>Кандидат юридичних наук, старший викладач закладу вищої освіти</p>
+        <p>Електронна пошта: komzuk.ea@ukr.net</p>
+    </div>
+    <div class="item item_6">
+        <img src="https://pushinka.top/uploads/posts/2023-03/1680110393_pushinka-top-p-avatarka-zhenskaya-delovaya-pinterest-39.jpg">
+        <p>ДАШЕВСЬКА ТАМІЛА ВІТАЛІЇВНА</p>
+        <p>Викладач закладу вищої освіти</p>
+        <p>Електронна пошта: dashevskaytamila3@gmail.com</p>
+    </div>
+    <div class="item item_7">
+        <img src="https://sneg.top/uploads/posts/2023-06/1687880581_sneg-top-p-avatarka-mama-vkontakte-1.jpg">
+        <p>ПЕРУН СВІТЛАНА ВАСИЛІВНА</p>
+        <p>Старший лаборант кафедри</p>
+        <p>Електронна пошта: svetlanaperun84@gmail.com</p>
+    </div>
+    <div class="item item_8">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZf-xUiOJrpXco3xyqmLtd72aa-nm5Y22S10XEwKcUSNWBp3RJ04ZEuV1QLMbIAFwpAls&usqp=CAU">
+        <p>ГЛАГОЛЬ АНЖЕЛІКА РУСЛАНІВНА</p>
+        <p>Лаборант кафедри</p>
+        <p>Електронна пошта: e-mail: lasker1@ukr.net</p>
+    </div>
+</div>
+</body>
+</html>
